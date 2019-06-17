@@ -12,7 +12,7 @@
     <style>
       html, body {
         width: 100%;
-        height: 99%;
+        height: 100%;
         overflow: hidden;
       }
       div#container {
@@ -23,9 +23,10 @@
       div#app {
         width: 80%;
       }
-      div#instructions {
+      div#content {
+        display: flex;
+        flex-direction: column;
         width: 20%;
-        height: 100%;
         padding: 4em 1em 1em 1em;
         margin-left: 1em;
         border-left: 1px solid #bdbdbd;
@@ -35,6 +36,13 @@
       p {
         font-family: "Roboto";
         color: #424242;
+      }
+      p#warning {
+        flex-grow: 1;
+      }
+      p#copyright {
+        text-align: center;
+        font-size: 0.8em;
       }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -48,9 +56,10 @@
   <body>
     <div id="container">
       <div id="app"></div>
-      <div id="instructions">
-	<p><b>Instrucciones:</b> Ingresa tu numero telef&oacute;nico para identificar a que operador pertenece, ejemplo: Claro, Tigo o Movistart. Utiliza tu teclado o haz click con tu mouse sobre el teclado num&eacute;rico.</p>
-	<p><small>* Disponible &uacute;nicamente para n&uacute;meros basados en Guatemala.</small></p>
+      <div id="content">
+	<p id="instructions"><b>Instrucciones:</b> Ingresa tu numero telef&oacute;nico para identificar a que operador pertenece, ejemplo: Claro, Tigo o Movistart. Utiliza tu teclado o haz click con tu mouse sobre el teclado num&eacute;rico.</p>
+	<p id="warning"><small>* Disponible &uacute;nicamente para n&uacute;meros basados en Guatemala.</small></p>
+	<p id="copyright"><small>&copy; Copyright 2019 <a href="mailto: roboli.services@gmail.com">Roboli Services</a></small></p>
       </div>
     </div>
     <script src="https://queoperadores.s3.amazonaws.com/app/main.js"></script>
