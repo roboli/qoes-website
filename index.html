@@ -8,41 +8,36 @@
     <meta name="keywords" content="Telefonia, Telefonos, Claro, Tigo, Movistar, Celulares, Identificador, Movil, Operador">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	  rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link href="https://cdn.muicss.com/mui-0.9.41/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.muicss.com/mui-0.9.41/js/mui.min.js"></script>
     <style>
       html, body {
         width: 100%;
         height: 100%;
-        overflow: hidden;
-      }
-      div#container {
-        display: flex;
-        width: 100%;
-        height: 100%;
+        overflow-x: hidden;
       }
       div#app {
+        position: relative;
         width: 80%;
       }
-      div#content {
-        display: flex;
-        flex-direction: column;
-        width: 20%;
-        padding: 4em 1em 1em 1em;
-        margin-left: 1em;
-        border-left: 1px solid #bdbdbd;
-        background-color: #f5f5f5;
-        z-index: 999;
+      .mui-appbar {
+        background-color: #e91e63;
+        box-shadow: 0 2px 8px #888888;
       }
-      p {
-        font-family: "Roboto";
-        color: #424242;
+      .mui-appbar td {
+        padding: 0 20px 0 20px;
       }
-      p#warning {
-        flex-grow: 1;
+      .mui-tabs__bar li a {
+        cursor: pointer;
+        color: white;
       }
-      p#copyright {
-        text-align: center;
-        font-size: 0.8em;
+      .mui-tabs__bar li.mui--is-active {
+        border-style: none;
+        color: black;
+      }
+      .mui-tabs__bar li.mui--is-active a {
+        border-style: none;
+        color: #750028;
       }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -54,14 +49,47 @@
     </script>
   </head>
   <body>
-    <div id="container">
-      <div id="app"></div>
-      <div id="content">
-	<p id="instructions"><b>Instrucciones:</b> Ingresa tu numero telef&oacute;nico para identificar a que operador pertenece, ejemplo: Claro, Tigo o Movistart. Utiliza tu teclado o haz click con tu mouse sobre el teclado num&eacute;rico.</p>
-	<p id="warning"><small>* Disponible &uacute;nicamente para n&uacute;meros basados en Guatemala.</small></p>
-	<p id="copyright"><small>&copy; Copyright 2019 <a href="mailto: roboli.services@gmail.com">Roboli Services</a></small></p>
+    <div id="mui-container">
+      <div class="mui-appbar">
+	<div style="vertical-align:middle;">
+	  <table width="100%">
+	    <tr style="vertical-align:middle;">
+	      <td class="mui--appbar-height">
+		<div class="mui--text-headline">Que operador es?</div>
+	      </td>
+	      <td class="mui--appbar-height" align="right">
+		<ul class="mui-tabs__bar">
+		  <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-default-1">Inicio</a></li>
+		  <li><a data-mui-toggle="tab" data-mui-controls="pane-default-2">¿Que es esto?</a></li>
+		  <li><a data-mui-toggle="tab" data-mui-controls="pane-default-3">Contacto</a></li>
+		</ul>
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+      </div>
+      <div class="mui-tabs__pane mui--is-active" id="pane-default-1">
+	<div class="mui-row">
+	  <div class="mui-col-md-12 mui-col-md-offset-1">
+	    <div id="app"></div>
+	  </div>
+	</div>
+      </div>
+      <div class="mui-tabs__pane" id="pane-default-2">
+	<div class="mui-row">
+	  <div class="mui-col-md-12 mui-col-md-offset-1">
+	    <div class="mui--text-body1">Descripcion aqui!</div>
+	  </div>
+	</div>
+      </div>
+      <div class="mui-tabs__pane" id="pane-default-3">
+	<div class="mui-row">
+	  <div class="mui-col-md-12 mui-col-md-offset-1">
+	    <div class="mui--text-body1">Contacto aqui!</div>
+	  </div>
+	</div>
       </div>
     </div>
-    <script src="https://queoperadores.s3.amazonaws.com/app/main.js"></script>
+    <script src="http://localhost:9000/out/main.js"></script>
   </body>
 </html>
