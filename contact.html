@@ -35,6 +35,9 @@
         border-style: none;
         color: #750028;
       }
+      #top-spacer {
+        height: 50px;
+      }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -64,9 +67,27 @@
 	  </table>
 	</div>
       </div>
+      <div id="top-spacer"></div>
       <div class="mui-row">
 	<div class="mui-col-md-8 mui-col-md-offset-2 mui--text-center">
-	  <div class="mui--text-body1">Contacto aqui!</div>
+	  <div class="mui--text-display1">Contacto</div><br />
+	  <div class="mui--text-subhead"><p>¿Tienes dudas o sugerencias? Puedes escribirme a <a href="mailto: roboli.services@gmail.com">roboli.services@gmail.com</a>. O puedes llenar el siguiente formulario:</p></div>
+	</div>
+      </div>
+      <div class="mui-row">
+	<div class="mui-col-md-8 mui-col-md-offset-2 mui--text-center">
+	  <form class="mui-form" method="POST" action="https://formspree.io/roboli.services@gmail.com">
+	    <div class="mui-textfield">
+	      <input type="text" name="email" placeholder="Email">
+	    </div>
+	    <div class="mui-textfield">
+	      <input type="text" name="name" placeholder="Nombre">
+	    </div>
+	    <div class="mui-textfield">
+	      <textarea name="message" placeholder="Mensaje"></textarea>
+	    </div>
+	    <button type="submit" class="mui-btn mui-btn--raised">Enviar</button>
+	  </form>
 	</div>
       </div>
     <script src="http://localhost:9000/out/main.js"></script>
