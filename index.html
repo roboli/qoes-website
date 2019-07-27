@@ -56,8 +56,18 @@
         color: #750028;
       }
 
+      #nav-menu {
+        text-align: right;
+      }
+
       @media screen and (max-width: 768px) {
-        #app-title {display: none;}
+        #app-title {
+          display: none;
+        }
+
+        #nav-menu {
+          text-align: center;
+        }
       }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -77,7 +87,7 @@
 	      <td id="app-title" class="mui--appbar-height">
 		<div class="mui--text-headline">Que operador es?</div>
 	      </td>
-	      <td class="mui--appbar-height" align="right">
+	      <td id="nav-menu" class="mui--appbar-height">
 		<ul class="mui-tabs__bar">
 		  <li><a alt="Home page" href="#home">Inicio</a></li>
 		  <li><a alt="About page" href="#about">¿Que es esto?</a></li>
